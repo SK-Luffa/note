@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(...jus) {
+            // console.log(jus); 
+            let sum = 0;
+            for (let i = 0; i < jus.length; i++) {
+                sum += jus[i]
+            }
+            return sum;
+        }
+
+        function readomNumber(bus) {
+            let k=[];
+            for (let i = 0; i < bus; i++) {
+                k.push(Math.random())
+            }
+            return k
+        }
+        const s=readomNumber(10)
+        console.log(sum(...s,...s))
+        
+        const  arr1=[1,2,3,4,5,6,7,8,9];
+        const arr2=[...arr1];
+
+        const obj1={
+            name:"张三",
+            age:14,
+            faster:{
+                name:"李四",
+                age:18
+            }
+        }
+        const obj2={
+            ...obj1
+        }
+    </script>
+</body>
+
+</html>

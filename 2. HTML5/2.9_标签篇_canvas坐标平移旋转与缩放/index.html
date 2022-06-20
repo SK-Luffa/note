@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas></canvas>
+    <script>
+        var k=document.getElementsByTagName("body")[0]
+        var s = document.getElementsByTagName("canvas")[0]
+        var img = document.createElement("img");
+      
+        ims = document.getElementsByTagName("img")[0];
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(img);
+        // k.appendChild(s);
+
+        var opens = s.getContext("2d");
+
+        // opens.beginPath();
+
+
+
+        // // 坐标系平移 这样我们就可以改变默认的旋转点，从而获取我们想要的结果
+        // opens.translate(100, 100)
+        // // 旋转方法 第一个参数是:角度 
+        // //  默认旋转点为画布原点  
+        // opens.moveTo(0, 0);
+        // opens.rotate(Math.PI * 1.5);
+        // // opens.lineTo(200, 200);
+
+        // // // 缩放 两个参数 分别代表缩放X和缩放Y
+        // // opens.scale(2, 2)
+        // opens.strokeRect(0, 100, 100, 100)
+
+        // opens.stroke();
+
+
+    </script>
+
+</body>
+
+</html>

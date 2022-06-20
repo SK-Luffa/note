@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box1 {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            border: 1px solid;
+            padding-bottom: 10px;
+
+        }
+
+        .box2 {
+            position: absolute;
+            left: 300px;
+            width: 150px;
+            height: auto;
+            border: 1px solid;
+            padding-bottom: 10px;
+        }
+
+        li {
+            position: relative;
+            width: 100px;
+            height: 30px;
+            background-color: #abcdef;
+            margin: 10px auto 0px auto;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <li></li>
+        <li></li> 
+        <li></li>
+    </div>
+    <div class="box2" ></div>
+    <script>
+        var dragDom;
+        var lilist = document.getElementsByTagName("li");
+        for (var i = 0; i < lilist.length; i++) {
+            lilist[i].setAttribute("draggable",true);
+            lilist[i].ondragstart=function(e){
+                dragDom=e.target;
+            }
+        }
+        var box2=document.getElementsByClassName("box2")[0];
+        box2.ondragover=function(e){
+            e.preventDefault();//阻止默认事件
+        }
+        box2.ondrop=function(e){
+         box2.appendChild(dragDom);
+         dragDom=null;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 圆心（x,y）,半径（r）,弧度（起始弧度，结束弧度），方向（顺时针，逆时针） -->
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        // s.style.width = "500px"
+
+        // s.style.height = "300px"
+        // s.style.border = "1px solid #000";
+        k.appendChild(s);
+        // 在动态创建canvas的时候，设置宽高不能直接设置style.width...那样比例会不对，需要直接设置canvas.width 切设置的值不能带有像素单位，不然不好使
+        s.width='300'
+        s.height="500"
+        var opens = s.getContext("2d");
+        
+        // 在js当中π的表示为 Math.PI 也就是说 Math.PI=π，一个圆=2π
+        opens.arc(100, 100, 50, 0, Math.PI * 2, 1)//前两个参数表示圆心的横坐标和纵坐标 ，第三个参数表示半径 ，第四个表示起始弧度 零度是水平右点 ，第五个表示结束弧度 ，第六个表示顺时针还是逆时针
+        opens.stroke();
+    </script>
+</body>
+
+</html>

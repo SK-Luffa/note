@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        path{
+            stroke: red;
+        }
+    </style>
+</head>
+<body>
+    <svg width="500px" height="500px" style="border:1px solid #000">
+        <!-- path只存在一个属性就是 d d的参数非常之多 -->
+        <!-- 注意：m 和 l 区分大小写  -->
+        <!-- M 和L 大写是绝对位置 M和L小写是相对位置 -->
+          <!-- M 100 100 表示起始到100 100的位置 --> 
+          <!-- L 200 200 表示终止位置 并且我们必须设置它的 storke:red/... -->
+          <!-- H 200 V200  H 水平方向的距离 V垂直方向的距离 -->
+          <!-- Z 闭合区间 不区分大小写 -->
+          <!-- A 100 50 0 1 1 150 200  /  100 直径 50 半径 0 旋转角度 1 表示选择椭圆两个圆弧之间的大的  1 顺时针   起始点是M 终点是 150 200 -->
+        <path d="M 100 100 L 200 200  l 200 300"></path>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            height: 100%;
+        }
+
+        body {
+            perspective: 800px;
+            height: 100%;
+
+        }
+
+        /* .jus {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: #f40;
+            border-radius: 50%;
+            top: 200px;
+            left:200px;
+            transform: translateZ(0px);
+        } */
+
+        /* .jus {
+            width: 200px;
+            height: 200px;
+             background-image: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1303413965,114280805&fm=26&gp=0.jpg); 
+               position: absolute;
+            background-color: black;
+            background-size: cover;
+            top: calc(50% + 100px);
+            left: calc(50% - 100px);
+            transform: rotateY(45deg);
+        } */
+        .kus {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            background-color: black;
+            transform-style: preserve-3d;     
+            transform: rotateY(0deg);  
+        }
+
+        .jus {
+            height: 100px;
+            width: 100px;
+
+            background-color: red;
+            transform: translateZ(100px)
+        }
+    </style>
+</head>
+
+<body class="kkk">
+    <div class="kus">
+        <div class="jus"></div>
+    </div>
+    <!-- <script>
+        var a = document.getElementsByClassName("kkk")[0]
+        document.body.onmousemove = function (e) {
+            // a.style.="red"
+            a.style.perspectiveOrigin = "" + e.pageX + "px"+" "+e.pageY+"px";
+         
+        }
+    </script> -->
+</body>
+
+</html>

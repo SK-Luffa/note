@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wapper {
+    width: 100%;
+    font-size: 0px;
+
+}
+
+.demo {
+
+    width: 20%;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    display: inline-block;
+}

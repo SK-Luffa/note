@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number=["a","b","c","d"];
+        console.log(number)
+        // 解构
+        const{0:n1,1:n2}=number
+        console.log(n1,n2)
+        // 解构2
+        
+        let[n1,,,n2]=number; //这样我们拿到的是第0和第4项 如果写一个不存的的则为undef 当然也可以赋默认值 用法和规则与对象
+        console.log(n1,n2);
+
+        let[,,,,[n1,n2]]=number;//解构二维数组
+
+        let[,,,,{a,b,v}]=number;//解构数组中的对象
+        const {a:A}=number[4]
+
+        const numbers =[1,2,3,4,5,6]; //解构
+        const [a,b,...c]=numbers; 
+        
+           
+    </script>
+</body>
+</html>

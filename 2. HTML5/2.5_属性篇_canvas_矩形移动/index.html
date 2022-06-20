@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.style.width = "500px"
+        
+        s.style.height = "300px"
+        s.style.border = "1px solid #000";
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        var height = 0;
+        //前两个参数表示位置（左上角） 后两个位置表示宽高
+        var timer = setInterval(function () {
+            opens.clearRect(0,0,500,300);//橡皮擦 每次擦去全部内容，就相当于是清屏了
+
+            opens.fillRect(100, height, 50, 50)///此时确实没1000/30秒每次往下移动了5 但是之前画的并没有删除掉
+            height += 5;
+            if(height==110){
+                clearInterval(timer)
+                
+            }
+        }, 1000 / 30)
+
+    </script>
+</body>
+
+</html>

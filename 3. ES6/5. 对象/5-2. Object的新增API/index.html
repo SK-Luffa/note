@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const a={
+            name:'马占山',
+            age:67,
+            user(){
+                console.log(name,age)
+            }
+        }
+        const b={
+            name:'山',
+            age:7,
+            
+        }
+        const c={
+            jus:'马占山',
+            kus:67,
+            bus(){
+                console.log(name,age)
+            }
+        }
+
+       const s= Object.assign(a,b,...c);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function test() {
+            // throw 2  //reject----失败
+            return 1//resolve-----成功
+        }
+
+
+        // await
+
+         async function tertch() {
+             const stus =await test();//这里返回的resolve是一个promise   这里 await 就就相当于在test的基础上 使用了.then函数
+                 
+                 console.log(atus); ///这里输出 1原因是因为test resolve(传过来的值是 1)
+                //  相当于
+                promise().then(resp=>{const stus=resp; console.log(stus)})
+
+         }
+    </script>
+</body>
+</html>

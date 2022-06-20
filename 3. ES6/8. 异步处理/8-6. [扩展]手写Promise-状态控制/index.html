@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const MyPromise = (() => {
+            const pending = "pending",
+                resolved = "resolved",
+                rejected = "rejected",
+                //   私有属性
+                PromiseValue = Symbol("promiseValue"), //状态数据
+                promiseStatus = Symbol("promiseStatus"); //当前状态
+            changeStatus = Symbol("changeStatus"); //改变promise的状态
+            // 两个作业队列，分别对应着resolved之后的队列和rejected之后的队列
+            thenables = Symbol("thenables");//resolvedthenable 成功完成的
+            catchables = Symbol("catchables");// 失败之后的
+            // 已决阶段的后续处理函数
+            settleHandle = Symbol("settleHandle");
+            // 串联的promise
+            linkPromise = Symbol("linkPromise")
+
+            return class {
+
+                //创建一个函数，改变当前Promise的状态 用于resolve
+                // 和reject状态的后续处理 //外部不可访问 所以我们要用符号
+                [changeStatus](newStatus, newValve, queue) {
+                    // 这里我们需要判断一下，如果是已决状态直接返回，如果是未决状态就进行下面的操作
+                    if (this[promiseStatus] !== pending) {
+                        // 已决状态无法变更
+                        return;
+                    }
+                    this[promiseStatus] = newStatus; //将当前状态置为resolved
+                    this[PromiseValue] = newValve; //将当前的数据改为用户传进来的值
+                    queue.forEach(hander => hander(newValve));
+                }
+                // executor 未决状态下（pending）的执行函数  
+                constructor(executor) {
+                    this[promiseStatus] = pending; //将当前状态置为pending
+                    this[PromiseValue] = undefined; //将当前状态数据置为undefiend
+                    this[thenables] = [];//后续粗粒函数的数组 -》resolved
+                    this[catchables] = [];//后续处理函数的数组-》rejected  
+                    // 这里是resolve状态 进入这个状态的前提是this[promiseStatus]是未决状态
+                    const resolve = (data) => {
+                        //调用 changeStatus 函数（私有）
+                        this[changeStatus](rejected, data, this[thenables]);
+
+                    };
+
+
+
+                    // 这里是reject状态 进入这个状态的前提是this[promiseStatus]是未决状态
+                    const reject = (data) => {
+                        //调用 changeStatus 函数（私有）
+                        this[changeStatus](resolved, data, this[catchables]);
+                    };
+
+
+                    try {
+                        executor(resolve, reject);
+                    } catch (error) {
+                        reject(error);
+                    }
+                }
+
+                // 这里是已决函数的后续处理  hander h后续处理函数 immediatelyStatus是否立即执行  queue 作业队列 
+                [settleHandle](hander, immediatelyStatus, queue) {
+                    // 这里需要进行判断，如果是resolved状态，那么直接运行，如果不是的话 才需要把它加入到队列当中
+                    if (this[promiseStatus] === immediatelyStatus) {
+                        // 因为他是微任务,但是这里我们模拟不了,所以我们这里写个异步模拟一下
+                        setTimeout(() => {
+                            // 是的话直接循行 这里我们需要拿到传进来的数据
+                            hander(this.PromiseValue);
+                        }, 0);
+
+                    } else {
+                        // 不是的话我们把它添加到队列当中
+                        queue.push(hander);
+                    }
+                }
+                [linkPromise](thenable, catchable) {//对回调函数进行处理 thenable 成功 catchable失败
+                    function exec(data, handler, resolve, reject) {
+                        try {
+                            const result = handler(data);//得到当前promise的结果
+                            if (result instanceof MyPromise) {
+                                result.then(d => {
+                                    resolve(d);
+                                }, error => {
+                                    reject(error);
+                                })
+                            }
+                            else { resolve(result); v }
+                        } catch (error) {
+                            reject(error);
+                        }
+                    }
+
+                    return new MyPromise((resolve, reject) => {
+
+                        this[settleHandle]((data => {
+                            exec(data, thenable, resolve, reject)
+
+                        }), resolved, this[thenables])
+
+
+                        this[settleHandle]((reason => {
+                            exec(reason, catchable, resolve, reject)
+                        }), reject, this[catchables])
+                    })
+                }
+                then(thenable, catchable) {
+
+
+                    return this[linkPromise](thenable, catchable);
+                }
+                catch(catchable) {
+
+                    return this[linkPromise](undefined, catchable);
+                }
+                static All(proms){
+                    return new MyPromise((resolve,reject)=>{
+                          const results =proms.map(p=>{
+                              const obj={
+                                  result:undefined,
+                                  isResolved:false
+                              }
+                              p.then(data=>{
+                                  obj.result=data;
+                                  obj.isResolved=true;
+                                const unResolved=  results.filter( f=>!r.isResolved)
+                                if(unResolved.length==0){
+                                    // 全部完成了
+                                    resolve(results.map(r=>r.result));
+                                }
+                              })
+                              return obj;
+                          })
+                    })
+                }
+                static race(proms){
+                    return new Promise((resolve,reject)=>{   
+                        proms.forEach(p=>{
+                            p.then(data=>{
+                                resolve(data);
+                            },err=>{
+                                reject(err);
+                            })
+                        })
+                    })
+                }
+                static All(proms){
+                   
+                }
+                static resolve(data){
+                    if(data instanceof MyPromise){
+                        return data;
+                    }else{
+                        return new MyPromise(resolve=>{
+                            resolve(data);
+                        })
+                    }
+                }
+            };
+            
+            
+        })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const pro = new MyPromise((resolve, reject) => {
+            resolve(1)
+        })
+        console.log(pro);
+    </script>
+</body>
+
+</html>

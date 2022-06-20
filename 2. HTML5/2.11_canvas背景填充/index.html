@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+
+
+
+        // opens.fillStyle = "#f40"
+        // opens.fillRect(100, 100, 100, 100)
+        // 填充图片  opens.drawImage(); 
+        var img = new Image();
+        img.src = "./123.png";
+        img.onload = function () {
+            opens.beginPath();
+          
+            // opens.translate(100,100)
+            opens.translate(100,100)
+            var bg = opens.createPattern(img, "no-repeat");//填充是以坐标系原点来进行填充的，所以这里需要必须提前改变坐标系
+          
+            opens.fillStyle = bg;
+            opens.fillRect(0, 0, 200, 100);
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

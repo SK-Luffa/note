@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            width: 500px; 
+           height: 500px;
+           border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+         // 用css设置canvas的宽高不是真正的canvas的宽高 必须写行内样式，或者用js赋值
+        var canvas=document.getElementsByTagName("canvas")[0];
+        // 创建画笔
+        var opens=canvas.getContext("2d");
+
+        // 画线。选择一个起点
+        opens.moveTo(0,0);
+        // 终点
+        opens.lineTo(100,100);
+        opens.lineTo(100,0);
+        opens.lineTo(0,0);
+        // 设置线条的粗细
+        opens.lineWidth=10;
+        // 自动帮你闭合起来  条件：必需第连续的线段  
+        opens.closePath();
+        // 填充的颜色
+        opens.fillStyle="#abcdef";
+        // 在画出来的图形中进行填充 
+        opens.fill() 
+        // 保存
+        opens.stroke() 
+        // 重新开启
+        opens.beginPath()
+        // 这样我们也可以同时画出两条不一样的线段宽度
+        opens.lineWidth=5;
+       
+         
+    </script>
+</body>
+</html>

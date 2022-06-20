@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 游戏界面 */
+.game {
+    width: 800px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 游戏当中的天空  */
+.game .sky {
+    background: url(./img/sky.png);
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* 背景 大地 */
+.game .land{
+    background: url(./img/land.png);
+    height: 112px;
+    width: 200%;
+    position: absolute;
+    bottom: 0px;
+    left: 0; 
+}
+/* 鸟 */
+.game .bird{
+    background: url(./img/bird.png);
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    left: 150px;
+    top: 150px;
+    
+
+}
+/* css雪碧图 控制他们进行显示 */
+.game .swing1{
+    background-position: -8px -10px;
+}
+.game .swing2{
+    background-position: -60px -10px;
+}
+.game .swing3{
+    background-position: -113px -10px;
+}
+
+/* 水管 */
+
+.pipe{
+    position: absolute;
+    height: 100px;
+    width: 52px;
+    left: 500px;
+}
+/* 上水管 */
+.pipe.up{
+
+    background: url(./img/pipeDown.png);
+    top: 0;
+    background-position: bottom;
+
+}
+.pipe.down{
+    bottom: 112px;
+   
+    background: url(./img/pipeUp.png);
+}
+/* 底部文字 */
+.info{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    
+}

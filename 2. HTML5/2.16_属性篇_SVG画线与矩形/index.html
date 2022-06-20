@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line1{
+            /* 设置 线段的颜色 */
+            stroke: black;
+            /* 设置线段的粗细   */
+            stroke-width: 2px;
+        }
+        .line2{
+            stroke: red;
+            stroke-width: 10px;
+        }
+    </style>
+</head> 
+
+<body>
+    <svg width="500px" height="500px" style="border:1px solid">
+        <!-- 线端标签 line 有四个属性 x1 y1 x2 y2 -->
+        <line x1="0" y1="0" x2="150" y2="150" class="line1"></line>
+        <line x1="150" y1="150" x2="150" y2="300" class="line2"></line>
+        <!-- rx xy 分别表示x方向的圆角和y方向的圆角 -->
+        <rect height="100" width="100" x="0" y="2" rx="10" ry="10"></rect>
+    </svg>
+    <script>
+        // SVG:矢量图，放大不会失真，适合大面积的贴图  通常动画较少或者较简单，标签和css绘画
+        // Canvas:通常用于小面积绘图，适合动画
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("svg");
+       
+        k.appendChild(s);
+
+    </script>
+</body>
+
+</html>

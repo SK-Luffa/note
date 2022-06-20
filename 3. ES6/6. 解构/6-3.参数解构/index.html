@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print({name,age,sex,address:{
+            rrobince,
+            city
+        }}){
+            console.log(name,age,sex,rrobince,city)
+        }
+        const user={
+            name:'kevin',
+            age:11,
+            sex:"男",
+            address:{
+                rrobince:"四川",
+                city:"成都"
+            }
+        }
+        print(user)
+    </script>
+</body>
+</html>

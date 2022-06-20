@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warrp {
+            height: 300px;
+            width: 500px;
+            border: 1px solid black;
+            display: flex;
+            /* 设置盒子的主轴方向column 垂直方向 */
+            /* flex-direction: row; */
+            /* flex-wrap: wrap-reverse; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* flex-wrap: nowrap; */
+            /* align-content: center; */
+
+
+        }
+
+        .content {
+            height: 100px;
+            width: 100px;
+            /* border: 1px solid pink; */
+            flex-shrink: 2;
+            /* flex-grow: 1; */
+        }
+/* 300/6=50 */
+ 
+     
+        .content:first-of-type {
+            flex-shrink: 2;
+            
+            width: 100px;
+        }
+
+        .content:nth-of-type(3) {
+            flex-shrink: 4;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warrp">
+        <div class="content">1</div>
+        <div class="content">2</div>
+        <div class="content">3</div>
+        <!-- <div class="content">4</div>
+        <div class="content">5</div>
+        <div class="content">6</div> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        body {
+            perspective: 2000px;
+            transform-style: preserve-3d;
+        }
+
+        .wrapper {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: calc(50%);
+            left: calc(50%);
+            transform: translate(-50%, -50%);
+            transform-style: preserve-3d;
+            animation: round 10s linear infinite;
+
+        }
+
+        @keyframes round {
+            0% {
+                transform: translate(-50%, -50%) rotateY(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotateY(360deg);
+            }
+        }
+
+        @keyframes min {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        img {
+            width: 300px;
+            position: absolute;
+        }
+
+        img:nth-of-type(1) {
+
+            transform: rotateY(36deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(2) {
+
+            transform: rotateY(72deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(3) {
+
+            transform: rotateY(108deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(4) {
+
+            transform: rotateY(144deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(5) {
+
+            transform: rotateY(180deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(6) {
+
+            transform: rotateY(216deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(7) {
+
+            transform: rotateY(252deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(8) {
+
+            transform: rotateY(288deg) translateZ(500px);
+
+        }
+
+        img:nth-of-type(9) {
+            transform: rotateY(324deg) translateZ(500px);
+
+
+        }
+
+        img:nth-of-type(10) {
+            transform: rotateY(360deg) translateZ(500px);
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="../../../background/1.jpeg" alt="">
+        <img src="../../../background/2.jpeg" alt="">
+        <img src="../../../background/3.jpeg" alt="">
+        <img src="../../../background/4.jpeg" alt="">
+        <img src="../../../background/5.jpeg" alt="">
+        <img src="../../../background/6.jpeg" alt="">
+        <img src="../../../background/7.jpeg" alt="">
+        <img src="../../../background/8.jpeg" alt="">
+        <img src="../../../background/9.jpeg" alt="">
+        <img src="../../../background/10.jpeg" alt="">
+
+
+    </div>
+    <script defer>
+        document.body.onmousemove = function (e) {
+            this.style.perspectiveOrigin = "" + e.pageX + "px " + e.pageY + "px";
+        }
+    </script>
+</body>
+
+</html>

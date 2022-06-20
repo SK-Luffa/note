@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="500px" height="500px" style="border:1px solid #000">
+
+        <defs>
+            <!-- 线性渐变 -->
+            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="100%">
+                <stop offset="0%" style="stop-color:blueviolet"></stop>
+                <stop offset="50%" style="stop-color:rgb(142, 127, 155)"></stop>
+                <stop offset="100%" style="stop-color:rgb(197, 43, 43)"></stop>
+            </linearGradient>
+            <!-- 高斯模糊 -->
+        <filter id="gs"> 
+            <feGaussianBlur in="SOurceGraphic" stdDeviation="20">
+
+            </feGaussianBlur>
+        </filter>
+        </defs>
+        <rect x="100"y="100" height="100" width="200" style="fill: url(#bg); filter:url(#gs) "></rect>
+    </svg>
+</body>
+</html>

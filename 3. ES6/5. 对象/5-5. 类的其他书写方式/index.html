@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const pad = "jus";
+        class Animal {
+            constructor(type, name, age, sex) {
+                this.type = type;
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            //  对某个属性值进行限定
+
+            // 创建一个age属性，并给它加上geter，读取该属性时，会运行该函数
+
+            get age() {
+                return this._age + "岁";
+            }
+
+            // 创建一个age属性，并给它加上setter，给该属性赋值时，会运行该函数
+
+            set age(age) {
+                if (typeof age !== 'number') {
+                    throw new TypeError("年龄的类型必须是number")
+                }
+                if (age < 0) {
+                    age = 0;
+                } else if (age > 1000) {
+                    age = 1000;
+                }
+                this._age = age;
+            };
+            [pad]() {
+                console.log(`【种类】：${this.type}`);
+                console.log(`【名字】：${this.name}`);
+                console.log(`【年龄】：${this.age}`);
+                console.log(`【性别】：${this.sex}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

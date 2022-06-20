@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function s(){
+            let p=123;
+            window.onclick=()=>{
+             console.log(this.p);
+            }
+            
+        }
+    s(); 
+
+    const x=num=>{
+        console.log("给我的数字是:",num)
+    }
+    x(123);
+        const obj={
+            count:0,
+            start:function(){
+                setInterval(()=>{
+                    this.count++;
+                    console.log( this.count)
+                },1000)
+            },
+            regEvent:function(){
+                
+                window.onclick=()=>{
+                    console.log(_his.count);
+                }
+            }
+        }
+        
+        const isOdd=function(num){
+            return num%2!==0
+        }
+        const isODD= num=> num %2!==0;
+    </script>
+</body>
+</html>

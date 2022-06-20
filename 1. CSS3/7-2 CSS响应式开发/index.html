@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 将页面大小 根据分辨率不同来进行调节 以展示给用户的大小感觉上差不多 -->
+    <!-- content=  
+            width：可视区宽度   device-width 
+            width=device-width : 在iphone或者ipad上 横竖屏的宽度=竖屏的宽度            这个属性就会失效或者达不到我们的要求
+            initial-scale=1.0  ：windows phone的IE浏览器上  横竖屏的宽度=竖屏的宽度      这个属性就会失效或者达不到我们的要求
+          除此之外我们还可以设置以下属性：
+                    user-scalable=no/yes   -----------是否允许用户进行缩放 默认值 yes（允许缩放）主要是手机端
+                    minimun-scale:         -----------最小缩放比
+                    maximun-scale：        -----------最大缩放比
+
+
+        -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wapper {
+            width: 100%;
+            font-size: 0px;
+
+        }
+
+        .demo {
+
+            width: 20%;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+    </style> -->
+    <!-- 媒体特性（临界点）必须加“()” -->
+    <!-- 第一种引入方式 -->
+    <link rel="stylesheet" media="screen and(max-width:750px)" href="index.css">
+    <!-- 第二种引入方式 -->
+    <style>
+        @import "index.css"screen and (max-width:750px);
+    </style>
+    <!-- 第三种引入方式  媒体查询不占用权重-->
+    <style>
+        /* 表示小于750px 大于0px 的屏幕 */
+        @media screen and (max-width:750px)and(min-width:0px) {
+
+            html,
+            body {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wapper">
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+    </div>
+    <script>
+      
+        
+    </script>
+    <!-- <script>
+        function b() {
+            this.name = 123
+        }
+        b.prototype.age = function () {
+            console.log(age)
+        }
+        var s = new b();
+        s.age();
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+
+        // 线性渐变
+        opens.beginPath();
+        // 渐变色依旧会受到坐标系的影响，所以再开始之前要调整好坐标系
+        opens.translate(100, 100)
+        var bg = opens.createLinearGradient(0, 0, 100, 100)//渐变位置 从0,0位置渐变到200,200的位置 
+        bg.addColorStop(0, "green");// 两个参数,第一个参数是0或1 表示起始位置或终止位置 第二个参数表示颜色
+        bg.addColorStop(1, "red");
+        opens.fillStyle = bg;
+        opens.fillRect(0, 0, 100, 100)
+        opens.save();
+        opens.stroke();
+        // 径向渐变
+        opens.restore();
+        opens.beginPath();
+        opens.translate(100, 100)
+        var bg = opens.createRadialGradient(50, 50, 20, 50, 50, 30)//径向渐变 前三个参数表示第一个点的x轴y轴的位置和半径 后一个表示第二个圆的坐标和半径
+        bg.addColorStop(0, "red");
+        bg.addColorStop(0.5,"green");
+        bg.addColorStop(1,"yellow");
+        opens.fillStyle = bg;
+        opens.fillRect(0, 0, 100, 100)
+
+
+
+    </script>
+</body>
+
+</html>

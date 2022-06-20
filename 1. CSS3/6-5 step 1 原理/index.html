@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .jus{
+            width: 100px;
+            height: 100px;
+            background-color: #f40;
+            animation: jus_color_change 4s steps(1,end);
+        }
+        @keyframes jus_color_change{
+            0%{
+                background-color: red;
+            }
+            25%{
+                background-color: green;
+            }
+            50%{
+                background-color: blue;
+            }
+            75%{
+                background-color: black;
+            }
+            100%{
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="jus"></div>
+</body>
+</html>

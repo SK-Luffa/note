@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line1{
+           stroke: black; 
+           stroke-width: 3px;
+           /*  变虚线  2px 表示虚线的填充 10px 表示虚线的空白处 4px又表示虚线的填充 以此类推... */
+           stroke-dasharray: 200px;
+           /* 偏移  向右偏移 10px */
+           stroke-dashoffset: 10px;
+           animation: move 2s linear infinite alternate-reverse;
+        }
+        @keyframes move{
+            0%{
+                stroke-dashoffset: 200px;
+            } 
+            100%{
+                stroke-dashoffset: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width="500px" height="500px" style="border:1px solid #000">
+         <line x1="100" y1="100" x2="300" y2="100" class="line1"></line>
+    </svg>
+</body>
+</html>

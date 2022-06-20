@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f4d;
+        }
+
+        /* 浮雕 */
+        .one {
+            position: absolute;
+            top: 100px;
+            height: 100px;
+            width: 200px;
+            font-size: 100px;
+            left: calc(50% - 100px);
+            color: #ddd;
+            text-shadow: 1px 1px #000, -1px -1px #fff;
+        }
+
+        .two {
+            position: absolute;
+            top: 400px;
+            height: 100px;
+            width: 200px;
+            font-size: 100px;
+            left: calc(50% - 100px);
+            color: #ddd;
+            text-shadow: 1px 1px #fff, -1px -1px #000;
+        }
+
+        .scree {
+            position: absolute;
+            top: 600px;
+            height: 100px;
+            width: 200px;
+            font-size: 100px;
+            left: calc(50% - 100px);
+            color: whidt;
+            -webkit-text-stroke: 1px white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">浮雕</div>
+    <div class="two">镂刻</div>
+    <div class="scree">描边</div>
+</body>
+<script>
+    function w() {
+        var a = 10;
+        function b() {
+            return a;
+        };
+        function c() {
+            var x = 1
+        };
+        c();
+    }
+    w();
+</script>
+
+</html>

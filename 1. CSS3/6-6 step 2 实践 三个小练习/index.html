@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 打字效果 */
+        .jus{
+            display: inline-block;
+            height: 100px;
+            background-color: orangered;
+            font-size: 80px;
+            line-height: 100px;
+            font-family: monospace;
+        }
+        .jus::after{
+            height: 90px;
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            content: "";
+            background-color: #fff;
+            border-left: 2px solid black;
+            box-sizing: border-box;    
+            animation: jus_change 1s step-end infinite,cover 12s steps(12,end);
+          
+        }
+        @keyframes cover{
+            0%{
+                left: 0;
+                
+            }
+            100%{
+                left: 100%;
+            }
+        }
+        @keyframes  jus_change{
+            0%{
+                border-left-color:rgba(0, 0, 0, 1) ;
+            }
+            50%{
+                border-left-color:rgba(255, 255, 255, 1) ;
+            }
+            100%{
+                border-left-color:rgba(0, 0, 0, 1) ;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 打字效果 -->
+    <div class="jus">asdaso;djas;ldkl;</div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(type,name,age,sex){
+            this.type=type;
+            this.name=name;
+            this.age=age;
+            this.sex=sex;
+        }
+        Animal.prototype.pint=function () {
+            console.log(`【种类】：${this.type}`);
+            console.log(`【名字】：${this.name}`);
+            console.log(`【年龄】：${this.age}`);
+            console.log(`【性别】：${this.sex}`);
+        }
+        
+        function Dog(name,age,sex){
+            Animal.call(this,"犬类",name,age,sex )
+        }
+        var dog1=new Dog("小白",19,"男")
+        //此时我们可以拿到animal上的属性，但是Animal原型上的方法我们并没有继承
+
+        Object.setPrototypeOf(Dog.prototype,Animal,prototype) //将第一个参数的隐式原型设置为第二个参数 
+
+// ES6 写法   关键字： estends----继承 
+      class DOGS extends Animal{ //这句话的意思是  类 DOGS  继承 Animal 
+        constructor(name,age,sex){
+        //   关键字：super---- 
+        super("犬类",name,age,sex); 
+        super.pint(); 
+        }
+      }
+
+    </script>
+</body>
+</html>

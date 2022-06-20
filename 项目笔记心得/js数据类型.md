@@ -1,0 +1,1 @@
+Number、String、Boolean、Null、undefined、object、symbol、bigInt，typeof也可以判断bigInt，它会返回 "bigint" 

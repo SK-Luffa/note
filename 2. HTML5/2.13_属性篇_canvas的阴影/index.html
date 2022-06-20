@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        opens.beginPath();
+
+        opens.shadowColor="red"; //阴影颜色
+        opens.shadowBlur=20; //设置阴影宽度 注意 阴影宽度是在一条边框的两边，也就是是说边框平分了一段阴影
+        opens.shadowOffsetX=10;//将阴影横向偏移10
+        opens.shadowOffsetY=10;
+        opens.fillRect(0,0,200,200);
+    </script>
+</body>
+</html>

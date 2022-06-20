@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const syb=Symbol();
+        // const syb1=Symbol();
+        // const boj1={
+        //     a:1,
+        //     b:2,
+        //     [syb]:3
+        // }
+        // const obj2={
+        //     a:"a",
+        //     b:"b",
+        //     [syb1]:"c",
+        // }
+        // console.log(boj1,obj2);
+        
+        //共享符号实现原理
+        const SymbolFor=(()=>{
+            const global={};
+            return function (name){
+            if(!global[name]){
+                global[name]=Symbol(name);
+            }    
+            console.log(global);
+            return global[name];
+            }
+        })()
+      
+    </script>
+</body>
+</html>

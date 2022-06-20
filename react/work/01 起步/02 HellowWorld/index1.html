@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="root">
+
+</div>
+<!-- React的核心库，与宿主环境无关 -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<!-- 以来核心库，将核心库的功能与页面结合   -->
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!--编译jsx-->
+<script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+
+    var h1 = <h1 title="第一个React元素">Hello World</h1>;
+    ReactDOM.render(h1, document.getElementById("root"));
+</script>
+
+</body>
+
+</html>

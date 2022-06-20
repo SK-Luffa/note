@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除自带样式 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 将他们设置一下，让body继承 */
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        body {
+            /* 设置景深 和3d效果 */
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+
+        .jus {
+            /* 设置宽高，然后设置景深，3d 因为transform-styel传不到孙子辈 */
+            height: 100px;
+            width: 100px;
+            transform-style: preserve-3d;
+            /* 定位给到，让其居中 */
+            position: absolute;
+            left: calc(50%);
+            top: calc(50%);
+            /* translate 相对于自身平移自身的一半 彻底居中 */
+            transform: translate(-50%, -50%);
+            /* 过渡动画 */
+            animation: kkkk 10s linear infinite;
+        }
+
+        @keyframes kkkk {
+            0% {
+                transform: translate(-50%, -50%) rotateY(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotateY(360deg);
+            }
+        }
+
+        img {
+            /* 设置整体图片的宽高和定位 */
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+
+       
+
+        /* 重点，分别设置每一张图片旋转的角度和旋转的轴 设置他们基于哪一个轴进行平移 */
+        img:nth-of-type(1) {
+            transform: rotateY(0deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(2) {
+            transform: rotateY(90deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(3) {
+            transform: rotateY(180deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(4) {
+            transform: rotateY(270deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(5) {
+            transform: rotateX(90deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(6) {
+            transform: rotateX(-90deg) translateZ(100px);
+            animation: ps 10s linear infinite;
+        }
+
+        img:nth-of-type(7) {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+
+        img:nth-of-type(8) {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        img:nth-of-type(9) {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+        img:nth-of-type(10) {
+            transform: rotateY(270deg) translateZ(50px);
+        }
+
+        img:nth-of-type(11) {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        img:nth-of-type(12) {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jus">
+        <img src="../../../background/1.jpeg" alt="">
+        <img src="../../../background/2.jpeg" alt="">
+        <img src="../../../background/3.jpeg" alt="">
+        <img src="../../../background/4.jpeg" alt="">
+        <img src="../../../background/5.jpeg" alt="">
+        <img src="../../../background/6.jpeg" alt="">
+        <img src="../../../background/1.jpeg" alt="">
+        <img src="../../../background/2.jpeg" alt="">
+        <img src="../../../background/3.jpeg" alt="">
+        <img src="../../../background/4.jpeg" alt="">
+        <img src="../../../background/5.jpeg" alt="">
+        <img src="../../../background/6.jpeg" alt="">
+    </div>
+    <script>
+        document.body.onmousemove = function (e) {
+            this.style.perspectiveOrigin = "" + e.pageX + "px " + e.pageY + "px";
+        }
+    </script>
+</body>
+
+</html>

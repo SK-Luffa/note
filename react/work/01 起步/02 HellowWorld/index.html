@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="root">
+
+</div>
+<!-- React的核心库，与宿主环境无关 -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<!-- 以来核心库，将核心库的功能与页面结合   -->
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!--编译jsx-->
+<script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel ">
+
+</script>
+<script>
+    // 创建一个h1元素
+    // React.createElement(参数1：元素类型 如果是字符串 是一个普通的HTML元素，参数2：元素的属性 ,... 元素的子节点);
+    var h1 = React.createElement("h1", {
+        title: "第一个react元素"
+    }, "Hello World");
+    // ReactDom.render(显示的东西,容器);
+    ReactDOM.render(h1, document.getElementById("root"));
+</script>
+</body>
+</html>

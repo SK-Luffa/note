@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        opens.beginPath();
+
+        opens.lineWidth = 15;
+        opens.moveTo(100, 100);
+        opens.lineTo(200, 100);
+
+        // opens.lineCap="square"//设置线端两端的样式：“butt”—原来的样子
+        //   “square”——在原先长度的基础上两端在加长一点
+        //   "round"——加长 然后两端变成半圆
+        opens.lineTo(100, 150);
+         opens.lineJoin="round" //两条线端接触的地方  "round"——变为圆角
+                                //                   "bevel"——一刀切去尖
+                                //                   "miter"——锋利的尖{默认}
+         opens.miterLimit=5  //如果尖太长也可以截一段
+        opens.stroke();
+
+    </script>
+</body>
+
+</html>

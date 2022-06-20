@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        opens.beginPath();
+
+        opens.strokeRect(0,0,200,200);
+        opens.font="30px Georgia"//两个参数第一个是字体大小，第二个是字体 
+        // 绘制文字{镂空} 三个参数 第一个是绘制的文字 第二个和第三个参数是位置
+        opens.strokeText("szx",100,100);
+        // 第二种 相对于输出文字
+        opens.fillText("sss",150,150 )
+    </script>
+</body>
+</html>

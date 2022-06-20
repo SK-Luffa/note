@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 800px; 
+        }
+        .jus{
+            position: absolute;
+            left: calc(50% - 50px);
+            top: 300px;
+            height: 100px;
+            width: 100px;
+            background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.juimg.com%2Ftuku%2Fyulantu%2F140703%2F330746-140f301555752.jpg&refer=http%3A%2F%2Fimg.juimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623294198&t=6a9c680fbe018ed17bf5501b7cbc8011);
+            background-size: cover;
+            transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform-origin: 50 50;
+            animation: round 2s infinite ;
+        }
+        @keyframes round{
+            0%{
+                transform:rotateZ(0) rotateX(0deg) rotateY(0deg) ;
+            }
+            100%{
+                transform:rotateZ(360deg) rotateX(360deg) rotateY(360deg) ;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="jus"></div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.width = 300;
+        s.height = 500;
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        opens.save();
+        opens.beginPath();
+        // 改变坐标轴 并且是影响全局的 就算保存重新开始也会被改变 如何解决 ？ 25行
+        opens.translate(100,100)
+        // 旋转
+        opens.rotate(Math.PI/4)
+        opens.beginPath();
+        opens.strokeRect(0,0,100,50);
+        // save  存储当前的坐标的平移旋转状态  坐标系的平移、缩放、旋转
+        opens.beginPath();
+        opens.restore() //restore() 表示恢复坐标轴的平移旋转
+        opens.strokeRect(0,0,100,50)
+        // 
+    </script>
+</body>
+
+ 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var k = document.getElementsByTagName("body")[0];
+        var s = document.createElement("canvas");
+        s.style.width = "200px"
+        s.style.height = "200px"
+        s.style.border = "1px solid #000";
+        k.appendChild(s);
+        var opens = s.getContext("2d");
+        // 第一种
+        opens.moveTo(0,0);
+        opens.lineTo(100,0);
+        opens.lineTo(100,50);
+        opens.lineTo(0,50);
+        opens.closePath();
+        opens.fillStyle="#000";
+        opens.fill();
+        opens.stroke()
+        // 第二种
+        opens.rect(100,100,200,100)
+        opens.stroke();
+        // 第三种
+        opens.strokeRect(100,100,200,100)
+        // 第四种
+        opens.fillRect(100,100,200,100)
+        
+
+    </script>
+</body>
+
+</html>
