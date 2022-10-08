@@ -1,0 +1,9 @@
+div{
+    transition: 500ms;
+}
+.exited, .exiting{
+    opacity: 0;
+}
+.entered, .entering{
+    opacity: 1;
+}   

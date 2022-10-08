@@ -6,9 +6,9 @@ import "./index.css"
 export default function App() {
   return (
     <div >
-        <Comp a={"123"} />
-          <FuncDefault classX={"zha"} a={10} b={20} c={30}/>
-          {/* <ClassDefault a={30} b={20} c={10}/> */}
+      <Comp a={123}  />
+      <FuncDefault classX={"zha"} a={10} b={20} c={30} />
+      {/* <ClassDefault a={30} b={20} c={10}/> */}
     </div>
   )
 }
