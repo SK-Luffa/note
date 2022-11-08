@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Router, Route,Routes   } from "react-router-dom"
+import { BrowserRouter as Router, Route,Routes   } from "react-router-dom"
 
 
 // 访问 /a 时 显示函数组件 A
@@ -18,11 +18,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route   path='/a'  element={<A/>} >
-          <h1>123123</h1>
-        </Route>
-        <Route path='/a/b' element={<B/>} />
-        <Route  element={<C/>} />
+        <Route  path='/a' element={<A/>} />
+        <Route path='/b' element={<B/>} />
+        <Route path='/c' element={<C/>} />
       </Routes>
     </Router>
 
