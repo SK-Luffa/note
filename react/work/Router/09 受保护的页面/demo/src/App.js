@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
 import Home from "./Home"
 import Login from "./Login"
 import Personal from "./Personal"
+import PRR from "./ProtectetRoute"
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,7 +22,7 @@ const App = () => {
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/" exact component={Home} />
-          <Route path="/personal" exact component={Personal} />
+          <PRR path="/personal" exact component={Personal} />
         </Switch>
 
       </div>
