@@ -1,54 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/src/App copy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/work/Router/05 路由信息/demos/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/01 概述/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/02 两种模式/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/05 Router/case/case/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/03 路由组件/03 路由组件.md" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/Router/03 路由组件/03 路由组件.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/03 路由组件/demo/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/Router/03 路由组件/demo/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/work/Router/04 [demo] 搭建后台管理模板/demo/yarn.lock" beforeDir="false" />
+    <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="2022.8.02/15.46-luffa_dzx">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +35,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dengzixu/WebstormProjects/notes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dengzixu/Documents/notes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -101,6 +62,13 @@
       <workItem from="1659426346034" duration="655000" />
       <workItem from="1665221013116" duration="1851000" />
       <workItem from="1667867445883" duration="53000" />
+      <workItem from="1667867503053" duration="2404000" />
+      <workItem from="1667968441554" duration="3892000" />
+      <workItem from="1668160962910" duration="1921000" />
+      <workItem from="1668339980686" duration="331000" />
+      <workItem from="1668343911350" duration="19000" />
+      <workItem from="1668343939763" duration="163000" />
+      <workItem from="1668384211916" duration="2579000" />
     </task>
     <task id="LOCAL-00001" summary="2022.6.20/23.26-luffa_dzx">
       <created>1655738877257</created>
@@ -151,13 +119,51 @@
       <option name="project" value="LOCAL" />
       <updated>1665221629718</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1667867558831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667867558831</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1667867657077</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667867657077</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1667969220971</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667969220971</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1668060665307</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668060665307</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1668384248755</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668384248755</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="2022.6.20/23.26-luffa_dzx" />
     <MESSAGE value="2022.6.21/8.41-luffa_dzx" />
     <MESSAGE value="2022.8.02/15.46-luffa_dzx" />
