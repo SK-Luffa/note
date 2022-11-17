@@ -1,0 +1,32 @@
+.header{
+    background:lightblue ;
+    line-height: 50px;
+    text-align: center;
+}
+.header a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.3em;
+} 
+.header a.active{
+    color: brown;
+}
+.Page{
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+}
+.Page h1{
+    margin:0;
+    line-height: 3;
+}
+.home{
+    background: lightpink;
+}
+.news{
+    background: lightgreen ;
+}
+.personal{
+    background: lightcoral;
+}
