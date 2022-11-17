@@ -1,12 +1,15 @@
 import React from 'react';
-import * as Pages from "./page"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import  News from "./page"
+// import { BrowserRouter as Router, Route } from "react-router-dom"
 import "./App.css"
-import "animate.css"
-import { CSSTransition } from "react-transition-group"
+// import "animate.css"
+// import { CSSTransition } from "react-transition-group"
 const App = () => {
+
   return (
     <div className="main">
+      <News.a/>
+      {/* <Pages.News/>
       <Router>
         <Pages.NavBar> </Pages.NavBar>
         <div className="page-container">
@@ -30,7 +33,7 @@ const App = () => {
           <Route path='/news' exact component={Pages.News} />
           <Route path='/personal' exact component={Pages.Personal} />
         </div>
-      </Router>
+      </Router> */}
     </div>
 
   );

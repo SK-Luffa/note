@@ -5,7 +5,7 @@ import React from 'react';
 
 const Link = (props) => {
     return (
-        <a href="javascript:;"  onClick={()=>{
+        <a href="javascript:" onClick={()=>{
             props.history.push(props.to)
         }}>{props.children}</a>
     );
