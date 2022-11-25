@@ -1,1 +1,0 @@
-let say:string="hello"
