@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="2022.8.02/15.46-luffa_dzx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/02 使用Redux管理数据/demo/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/02 使用Redux管理数据/demo/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/02 使用Redux管理数据/demo/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/02 使用Redux管理数据/demo/src/redux/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/redux/action/action-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/redux/action/number-action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/src/redux/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/03 action/demo/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +83,7 @@
       <workItem from="1668938152564" duration="3177000" />
       <workItem from="1669117634092" duration="4000" />
       <workItem from="1669167083551" duration="2193000" />
+      <workItem from="1669354644010" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="2022.6.20/23.26-luffa_dzx">
       <created>1655738877257</created>
@@ -228,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669254122533</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1669543542766</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669543542766</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
