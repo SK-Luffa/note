@@ -10,7 +10,7 @@ function reducer(state,action){
     // 返回一个新的状态
     if(action.type==="increase"){
         return state + 1
-    } else if (action.type ==="decrease"){
+    } else if (action.type ==="decrease"){ 
         return state-1
     }
     return state;//如果type是无效的，数据不变 
