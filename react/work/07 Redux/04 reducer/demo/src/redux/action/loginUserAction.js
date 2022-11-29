@@ -1,10 +1,11 @@
+export const setLoginUserType = Symbol("set-login-user");
 
-export const setLoginUserType=Symbol('set-login-user');
+// 设置用户登录的action
+// user 表示当前登陆的用户
+export function createSetLoginUserAction(user) {
 
-// 设置登录用户的action
-export function createsetLoginUserType(user){
     return {
         type: setLoginUserType,
-        payload:user
+        payload: user
     }
 }

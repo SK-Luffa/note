@@ -1,19 +1,20 @@
-export const AddUser = Symbol("add-user");
+export const AddUser=Symbol("add-user");
 export const DeleteUser = Symbol("delete-user");
-export const UpdateUser = Symbol("update-user");
+export const UpdateUser = Symbol("Update-user");
 
-export const fn_AddUser = (user) => ({
-  type: AddUser,
+export const createAddUserAction = (user) => ({
+    type: AddUser,
   payload:user
 })
-export const fn_DeleteUser = (id) => ({
+
+export const createDeleteUserAction = (id) => ({
     type: DeleteUser,
     payload: id
 })
-export const fn_UpdateUser = (id,newUserData) => ({
+export const createUpdateUserAction = (id,newUserData ) => ({
     type: UpdateUser,
     payload: {
-        ...newUserData,
-        id
+    ...newUserData,
+        id,
     }
 })
