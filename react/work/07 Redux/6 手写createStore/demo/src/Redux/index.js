@@ -1,1 +1,2 @@
-export {default as createStore} from "./createStore.js"
+import createStore from "./createStore";
+

@@ -1,7 +1,9 @@
-import { createStore } from "redux"
+import { configureStore } from "redux"
 import * as NumberAction from "./action/numberAction"
 // import * as ActipnType from "./action/actionType"  
+import  {createAddUserAction} from "./action/usersAction"
 import reducer from "./reducer/index"
+import uuid from "uuid"
 // 假设仓亏中仅存放了一个数字，该数字的变化可能是+1 或者-1
 // 约定action的格式：{type:“操作类型”，payload：附加数据}
 
@@ -21,12 +23,20 @@ import reducer from "./reducer/index"
 
 // }
 
-const stroe = createStore(reducer)
+const stroe = configureStore(reducer)
 
-//第一个参数是action创建函数合并的对象(就是合并对于state的操作函数)，第二个参数就是仓库的dispatch函数  
-// 得到一个新的对象，新对象的中的属性名与第一个参数的属性名一致
+// //第一个参数是action创建函数合并的对象(就是合并对于state的操作函数)，第二个参数就是仓库的dispatch函数  
+// // 得到一个新的对象，新对象的中的属性名与第一个参数的属性名一致
 
 console.log(stroe.getState());
 
-stroe.dispatch(NumberAction.getDecreaseAction())
-console.log(stroe.getState());
+stroe.dispatch(createAddUserAction({
+   id:uuid(),
+   name:"abc",
+   age:10,
+
+}))
+
+// stroe.dispatch(NumberAction.getDecreaseAction())
+// console.log(stroe.getState());
+
