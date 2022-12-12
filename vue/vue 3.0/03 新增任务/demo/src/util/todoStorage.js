@@ -19,3 +19,13 @@ export function fetch (){
 export function save(todos){
     localStorage.setItem(LocaL_KEY,JSON.stringify(todos ))
 }
+export function filter(todos,visibility="all"){
+  if(visibility=="all"){
+    return todos
+  }else if(visibility=="active"){
+    return todos.filter(it=>!it.completed)
+  }else if(visibility=="comleted"){
+    return todos.filter(it => it.completed)
+  }
+  throw new Error("异常，visibility传入一场")
+}
