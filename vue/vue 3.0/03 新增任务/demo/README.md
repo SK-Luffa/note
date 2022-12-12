@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+#### watchEffect  监控副作用  来源于 composition api 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+监听hash值的变化   window.addEventListener("hashchange")
+
+ 如何在setup中设置 生命周期函数
+
+  1. 组件挂载时的生命周期函数
+
+   2. 组件销毁时的生命周期函数
+
+*  在vue3中  vue将这些生命周期函数变为了一些普通函数
