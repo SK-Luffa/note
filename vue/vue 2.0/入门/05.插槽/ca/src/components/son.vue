@@ -2,9 +2,10 @@
   <div>
     <p>张三</p>
     <p>{{name}}</p>
+      <slot name="le"></slot>
     <slot></slot>
     <slot name="si"></slot>
-    <slot name="le"></slot>
+  
   </div>
 </template>
 
