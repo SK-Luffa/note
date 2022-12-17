@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <son ref="para">
-      <template #:si>干啥</template>
-      <template #:le>咋的</template>
+      <template #si>干啥</template>
+      <template #le>咋的</template>
     </son>
   </div>
 </template>
