@@ -45,14 +45,6 @@ value={
     updateUser:function(u)
 }
 ```
-
-
-
- 
-
- 
-
-
  
  ## 前端需要一个独立的数据解决方案
  
