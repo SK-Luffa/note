@@ -2,7 +2,8 @@
     <div class="check-editor">
         <div class="check-editor-inner">
             <div class="checkbox " :class="{ checked: modelValue }" @click="handleChecked"></div>
-            <input type="text" class="editor" />
+            <input type="text" class="editor" :value="title" @input="handleTextChange"/>
+            {{title}}
         </div>
     </div>
 </template>
@@ -10,14 +11,23 @@
 export default {
     props: {
         modelValue: Boolean,
+        title:String,
+       titleModifiers:{
+            default:()=>({})
+        }
     },
     setup(props,ctx) {
         const handleChecked = () => {
+            console.log(props.titleModifiers);
             ctx.emit("update:modelValue", !props.modelValue)
         };
-
+        const handleTextChange=(e)=>{
+           
+            ctx.emit("update:title", e.target.value)
+        }
         return{
             handleChecked,
+            handleTextChange
         }
       
     }

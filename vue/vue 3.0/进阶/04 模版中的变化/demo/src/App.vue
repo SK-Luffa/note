@@ -3,7 +3,8 @@
 <template>
   <div id="app">
 
-    <CheckEditor @update:modelValue="checked=$event" :modelValue="checked" />
+    <CheckEditor  v-model:title.trim="title" />
+    {{title}}
   </div>
 
 </template>
@@ -41,6 +42,7 @@ export default {
  
     return {
       checked:true,
+      title:"xiaomi "
     }
   }
 }
