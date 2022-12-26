@@ -32,7 +32,7 @@
 
 ###  actions  专门用来处理异步请求  
    
-   * actons的用法基本上和mutations是一样的，只不过这个对象是专门用来处理异步的
+   * actions的用法基本上和mutations是一样的，只不过这个对象是专门用来处理异步的
  
          例子：
          actions:{
