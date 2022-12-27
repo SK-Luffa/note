@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="2022.8.02/15.46-luffa_dzx">
+    <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/redux/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/redux/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/redux/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/store/reducer/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/work/07 Redux/06 手写createStore/demo/src/store/reducer/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +97,7 @@
       <workItem from="1671385323775" duration="2856000" />
       <workItem from="1671680678551" duration="3140000" />
       <workItem from="1672108963567" duration="68000" />
-    </task>
-    <task id="LOCAL-00009" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1667867657077</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1667867657077</updated>
+      <workItem from="1672148979707" duration="633000" />
     </task>
     <task id="LOCAL-00010" summary="2022.8.02/15.46-luffa_dzx">
       <created>1667969220971</created>
@@ -437,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672078311456</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1672149003076</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1672149003087</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
