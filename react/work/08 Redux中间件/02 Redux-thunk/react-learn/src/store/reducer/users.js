@@ -1,10 +1,7 @@
 import * as usersAction from "../action/usersAction"
 import uuid from "uuid"
 
-const initialState = [
-    { id: uuid(), name: "用户1", age: 11 },
-    { id: uuid(), name: "用户2", age: 12 }
-];
+const initialState = [ ];
 
 export default (state = initialState, { type, payload }) => {
     switch (type) {
@@ -14,6 +11,9 @@ export default (state = initialState, { type, payload }) => {
             return state.filter(it => it.id !== payload);
         case usersAction.UPDATEUSER:
             return state.map(it => it.id === payload.id ? {...it, ...payload} : it);
+            case usersAction.SETUSERS:
+                return payload
+
         default:
             return state
     }

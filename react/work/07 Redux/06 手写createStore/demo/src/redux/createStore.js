@@ -32,7 +32,7 @@ const createStore = function (reducer, defaultState) {
         currentdefaultState = currentreducet(currentdefaultState, action)
         //运行所有的订阅者(监听器)
         for (const listener of listeners) {
-            listener();
+            listener(); 
         }
 
     }
