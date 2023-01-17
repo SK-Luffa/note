@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react/work/10 umijs/01 umi简介/demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react/work/10 umijs/09 umi脚手架/demo" vcs="Git" />
   </component>
 </project>
