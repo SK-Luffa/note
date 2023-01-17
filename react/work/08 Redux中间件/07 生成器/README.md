@@ -48,6 +48,31 @@ for(const item of generator){
     ```
 4. 生成器函数的返回值，会作为迭代结束时的value
   1. 但是 ，如果在返回结束以后仍然调用next，则value为undefiend 
+5. 生成器调用next()的时候，可以传递参数，该参数会作为生成器函数体上一次yield表达式的值
+  1. 生成器第一次调用next方法时，传递参数没有任何意义  
+6. 生成器带有一个throw方法，该方法的效果与next效果相同，唯一的区别在于 ：
+  1. next方法传递的参数会被当成一个正常的返回值
+  2. throw方法传递的参数是一个错误的对象，会导致生成器函数内部发生一个错误   generator.throw(new Error("错误"))
+7. 生成器带有一个retun方法，该方法会直接结束生成器    generator.return()
+8. 若要在生成器内部调用其他生成器，注意：如果直接调用，得到的是一个生成器，如果加入*号调用，则进入其生成器内部执行。如果是```yeild* 函数（）```调用生成器函数，则该函数的返回结果，为该表达式的结果
+    ```js
+    function g2(){
+      yield "x";
+      console.log(123)
+      yeild 'y'
+    }
+
+    function* createGenerator() {
+
+    console.log("生成器函数的函数体");
+    
+    yield* g2 //1 会被作为当前迭代的数据
+    console.log("生成器函数的函数体1");
+    yield 2//2会被作为当前迭代的数据
+   }
+   let generator = createGenerator()
+    ```
+    
 
   
 
