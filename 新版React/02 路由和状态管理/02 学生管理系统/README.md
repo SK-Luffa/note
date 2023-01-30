@@ -17,3 +17,13 @@ https://v3.bootcss.com/examples/starter-template/
 因为我们用到了bootstrap 相关的样式类，所以我们需要引入Bootstrap，去 bootcdn
 
 
+
+react-router-dom  组件：
+
+* BrowserRouter  
+* Routes
+* Route
+* Navigate
+* NavLink
+
+

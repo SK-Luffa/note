@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Route,Routes} from 'react-router-dom'
+import {Route,Routes,Navigate,NavLink} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Add from './components/Add'
@@ -24,12 +24,12 @@ export default function App() {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#">主页</a></li>
-              <li><a href="#">关于我们</a></li>
+              <li className="active"> <NavLink to="/home" className='navigation' >主页</NavLink></li>
+              <li><NavLink to="/about">关于我们</NavLink></li>
 
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li ><a href="#">添加用户 </a></li>
+              <li ><NavLink to='/add'>添加用户 </NavLink></li>
             </ul>
           </div>
         </div> 
@@ -39,7 +39,8 @@ export default function App() {
         {/* 匹配上的路由所对应的组件显示在这个位置 */}
         <Routes >
           {/* 在route组件中书写对应的路由，以及路由所对应的组件 */}
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Navigate replace to='/home' />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/add' element={<Add />} />
         </Routes> 
