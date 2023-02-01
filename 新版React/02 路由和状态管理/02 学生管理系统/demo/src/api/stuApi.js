@@ -8,3 +8,11 @@ export function getStuListApi(){
         method:'GET',
     })
 }
+export function addStuApi(data) {
+
+    return request({
+        url: '/students',
+        method: 'POST',
+        data
+    })
+}

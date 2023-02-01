@@ -1,60 +1,71 @@
 {
-     "students":[
-          {
-              "name":"1",
-              "age":"2",
-              "phone":"17629198230",
-              "email":"228489152122@qq.com",
-              "deucation":"11aedas",
-              "graduationschool":"asdasdasd",
-              "profession":"asdads",
-              "profile":"dasdasdasdzz",
-              "id":"1"
-          },
-        {
-            "name": "2",
-            "age": "23",
-            "phone": "17629198230",
-            "email": "228489152122@qq.com",
-            "deucation": "11aedas",
-            "graduationschool": "asdasdasd",
-            "profession": "asdads",
-            "profile": "dasdasdasdzz",
-            "id": "2"
-        },
-        {
-            "name": "3",
-            "age": "24",
-            "phone": "17629198230",
-            "email": "228489152122@qq.com",
-            "deucation": "11aedas",
-            "graduationschool": "asdasdasd",
-            "profession": "asdads",
-            "profile": "dasdasdasdzz",
-            "id": "3"
-        },
-        {
-            "name": "4",
-            "age": "12",
-            "phone": "17629198230",
-            "email": "228489152122@qq.com",
-            "deucation": "11aedas",
-            "graduationschool": "asdasdasd",
-            "profession": "asdads",
-            "profile": "dasdasdasdzz",
-            "id": "4"
-        }
-     ],
-     "classes":[
-         {
-             "id":1,
-             "name":"web01",
-             "description":"这是一班"
-         },
-        {
-            "id": 2 ,
-            "name": "web02",
-            "description": "这是二班"
-        }
-     ]
+  "students": [
+    {
+      "name": "1",
+      "age": "2",
+      "phone": "17629198230",
+      "email": "228489152122@qq.com",
+      "deucation": "11aedas",
+      "graduationschool": "asdasdasd",
+      "profession": "asdads",
+      "profile": "dasdasdasdzz",
+      "id": "1"
+    },
+    {
+      "name": "2",
+      "age": "23",
+      "phone": "17629198230",
+      "email": "228489152122@qq.com",
+      "deucation": "11aedas",
+      "graduationschool": "asdasdasd",
+      "profession": "asdads",
+      "profile": "dasdasdasdzz",
+      "id": "2"
+    },
+    {
+      "name": "3",
+      "age": "24",
+      "phone": "17629198230",
+      "email": "228489152122@qq.com",
+      "deucation": "11aedas",
+      "graduationschool": "asdasdasd",
+      "profession": "asdads",
+      "profile": "dasdasdasdzz",
+      "id": "3"
+    },
+    {
+      "name": "4",
+      "age": "12",
+      "phone": "17629198230",
+      "email": "228489152122@qq.com",
+      "deucation": "11aedas",
+      "graduationschool": "asdasdasd",
+      "profession": "asdads",
+      "profile": "dasdasdasdzz",
+      "id": "4"
+    },
+    {
+      "name": "12313",
+      "age": "12312312",
+      "phone": "31231231",
+      "email": "23123123",
+      "education": "高中或职高",
+      "graduationSchool": "123123",
+      "profession": "123123123",
+      "profile": "213123123",
+      "id": "fBhG89c"
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "name": "web01",
+      "description": "这是一班"
+    },
+    {
+      "id": 2,
+      "name": "web02",
+      "description": "这是二班"
+    }
+  ]
 }

@@ -7,8 +7,12 @@
     margin: 0 10px;
     font-weight: 300;
 }
-.active{
+a.active{
+    color: #ccc;
    text-decoration: underline; 
    color: red !important;
    background: #ccc !important  ;
+}
+.table{
+    margin-top: 30px;
 }

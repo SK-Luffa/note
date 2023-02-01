@@ -3,10 +3,13 @@ import React from 'react'
 import {Route,Routes,Navigate,NavLink} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
-import Add from './components/Add'
+import AddOrEdit from './components/AddOrEdit'
+import Detail from './components/Detail'
 import "./CSS/App.css"
 
 export default function App() {
+  // let loaction=useLocation();
+  // console.log(loaction);
   return (
     // 最外层容器
     <div className="container" id='app'>
@@ -29,7 +32,7 @@ export default function App() {
 
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li ><NavLink to='/add'>添加用户 </NavLink></li>
+              <li ><NavLink to='/addOrEdit'>添加用户 </NavLink></li>
             </ul>
           </div>
         </div> 
@@ -42,7 +45,8 @@ export default function App() {
           <Route path='/' element={<Navigate replace to='/home' />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/add' element={<Add />} />
+          <Route path='/addOrEdit' element={<AddOrEdit />} />
+          <Route path='/detail/:id' element={<Detail />} />
         </Routes> 
       </div>
      
