@@ -1,25 +1,15 @@
-import { React, useEffect } from 'react'
+import { React, } from 'react'
 
 export default function About() {
-  useEffect(() => {
-    setTimeout(() => {
-      console.log(1);
-    }, 0);
-    new Promise(function executor(resolve) {
-      console.log(2);
-      for (var i = 0; i < 99999; i++) {
-        i === 99998 && resolve()
-      }
-      console.log(3);
-    }).then(function () {
-      console.log(4);
-    })
-    console.log(5);
-  }, [])
+  
 
 
 
   return (
-    <div>About</div>
+   <div className="about container">
+     <h1 className='page-header'>使用说明</h1>
+     <p>通过此系统熟悉react以及react router的使用</p>
+     <p>联系方式</p>
+   </div>
   )
 }
