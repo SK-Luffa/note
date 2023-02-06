@@ -1,10 +1,12 @@
-import { React, useState } from 'react'
-import {addStuApi} from '../api/stuApi'
-import {useNavigate} from "react-router-dom"
+import { React, useState, useEffect } from 'react'
+import { addStuApi, getStuByIdApi,editStuByIdAPi } from '../api/stuApi'
+import { useNavigate, useParams } from "react-router-dom"
+
 
 // 该组件有两个功能一个是添加一个是修改
 export default function AddOrEdit(pros) {
     const navigate = useNavigate();
+    const { id } = useParams()
     //创建一个表单状态
     const [stu, setStu] = useState({
         name: "",
@@ -33,32 +35,54 @@ export default function AddOrEdit(pros) {
         setStu(newstuInfo)
 
     }
+
+    useEffect(() => {
+        if (id) {
+            getStuByIdApi(id).then(({ data }) => {
+                setStu(data)
+            })
+        }
+    }, [id])
     // 表单提交
     const submitStuInfo = (e) => {
         e.preventDefault()
 
         for (const key in stu) {
-           
-            if(!stu[key]){
-                debugger
+
+            if (!stu[key]) {
+                
                 alert("请完善表单的每一项")
                 return
             }
-           
+
         }
-        addStuApi(stu).then(()=>{
-            // 跳转
-            navigate("/home",{
-                state:{
-                    alert:"用户添加成功",
-                    type:"success"
-                }
+
+        if(id){
+            // 编辑
+            editStuByIdAPi(id,stu).then(()=>{
+                navigate("/home", {
+                    state: {
+                        alert: "用户修改成功",
+                        type: "success"
+                    }
+                })
             })
-        })
+        }else{
+            addStuApi(stu).then(() => {
+                // 跳转
+                navigate("/home", {
+                    state: {
+                        alert: "用户添加成功",
+                        type: "success"
+                    }
+                })
+            })
+        }
+       
     }
     return (
         <div className="contatiner">
-            <div className="page-header">添加用户</div>
+            <div className="page-header">{id ? "修改学生" : "添加学生"}</div>
             <form id='myFrom' onSubmit={submitStuInfo}>
                 <div className="well">
                     <div className="form-group">
