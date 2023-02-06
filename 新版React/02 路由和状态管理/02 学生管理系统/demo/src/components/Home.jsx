@@ -24,7 +24,10 @@ export default function Home() {
     },[location])
       
 
-    const changeHandle = () => { }
+    const changeHandle = () => {
+
+        
+     }
 
     const trs = stuList.map((item, index) => {
         return (
