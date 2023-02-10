@@ -1,4 +1,5 @@
 import React from 'react'
+import {delListAction,changeAction} from "../redux/actions"
 
 
 export default function List(props) {
@@ -6,11 +7,13 @@ export default function List(props) {
     const ulList = props.store.getState().list.map((item, index) => {
         return (
             <li key={index} className='text-primary listx'>
-                <span>{item.content}</span>
+                <span onClick={() => { props.store.dispatch(changeAction(index)) }}>{item.content}</span>
                 <button 
                 type='button'
                     className='close '
-                
+                    onClick={()=>{
+                        props.store.dispatch(delListAction(index))
+                    }}
                 > &times; </button>
             </li>
         )
