@@ -37,11 +37,14 @@ export function todoReducer(state = defaultState, action) {
             // 新增
             return { list: arr };
         case del:
+           
             // 删除
-            return;
+            arr.splice(action.data, 1)
+            return { list: arr };
         case change:
-            修改
-            return;
+            arr[action.data].status = !arr[action.data].status
+            // 修改
+            return { list: arr } ;
         default:
             return state
     }

@@ -26,3 +26,7 @@
  * state是只读的，每次状态更新之后只能返回一个新的state
  * 没有Dispatch，而是在store中集成了dispatch方法，stroe.dispatch()是view发出action的唯一途径
  * 支持使用中间件管理异步数据流
+
+
+需要在创建store的地方添加如下代码；
+export const store = createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__&& window.__REDUX_DEVTOOLS_EXTENSION__())
