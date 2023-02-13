@@ -1,0 +1,26 @@
+.container{
+    width: 320px;
+    margin: 100px auto;
+}
+h1{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.item{
+    cursor: pointer;
+}
+.completed{
+    text-decoration: line-through;
+}
+.form-inline{
+   display: flex;
+   justify-content: center;
+}
+.listx{
+    width: 320px;
+    display: flex;
+        justify-content:space-between;
+}
