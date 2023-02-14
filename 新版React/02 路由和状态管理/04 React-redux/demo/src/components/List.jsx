@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { useSelector,useDispatch } from "react-redux"
-import {change,del} from "../redux/todoListSlice"
+// import { useSelector,useDispatch } from "react-redux"
+// import {change,del} from "../redux/todoListSlice"
+import {useSelector,useDispatch,change,del} from "./lx.js"
 
 export default function List(props) {
     const dsipatch=useDispatch();
