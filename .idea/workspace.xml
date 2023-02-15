@@ -9,6 +9,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -103,105 +109,10 @@
       <workItem from="1673968683480" duration="849000" />
       <workItem from="1674051144038" duration="3181000" />
       <workItem from="1674648921849" duration="1895000" />
-      <workItem from="1674984243191" duration="1366000" />
-    </task>
-    <task id="LOCAL-00036" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670298264260</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1670298264261</updated>
-    </task>
-    <task id="LOCAL-00037" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670361355907</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1670361355907</updated>
-    </task>
-    <task id="LOCAL-00038" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670361436627</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1670361436627</updated>
-    </task>
-    <task id="LOCAL-00039" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670378824897</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1670378824897</updated>
-    </task>
-    <task id="LOCAL-00040" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670484980029</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1670484980029</updated>
-    </task>
-    <task id="LOCAL-00041" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670484990727</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1670484990727</updated>
-    </task>
-    <task id="LOCAL-00042" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670552521351</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1670552521351</updated>
-    </task>
-    <task id="LOCAL-00043" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670552732927</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1670552732927</updated>
-    </task>
-    <task id="LOCAL-00044" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670811388842</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1670811388842</updated>
-    </task>
-    <task id="LOCAL-00045" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670811398355</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1670811398355</updated>
-    </task>
-    <task id="LOCAL-00046" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670858180043</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1670858180043</updated>
-    </task>
-    <task id="LOCAL-00047" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670898136110</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1670898136110</updated>
-    </task>
-    <task id="LOCAL-00048" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670984104289</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1670984104290</updated>
-    </task>
-    <task id="LOCAL-00049" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1670984222435</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1670984222435</updated>
+      <workItem from="1674984243191" duration="3411000" />
+      <workItem from="1675124718218" duration="984000" />
+      <workItem from="1675218788866" duration="807000" />
+      <workItem from="1675649812392" duration="12010000" />
     </task>
     <task id="LOCAL-00050" summary="2022.8.02/15.46-luffa_dzx">
       <created>1671070124450</created>
@@ -448,7 +359,105 @@
       <option name="project" value="LOCAL" />
       <updated>1675023694345</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675032499766</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1675032499766</updated>
+    </task>
+    <task id="LOCAL-00086" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675071533429</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1675071533429</updated>
+    </task>
+    <task id="LOCAL-00087" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675124493075</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1675124493075</updated>
+    </task>
+    <task id="LOCAL-00088" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675124626046</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1675124626046</updated>
+    </task>
+    <task id="LOCAL-00089" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675218805030</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1675218805030</updated>
+    </task>
+    <task id="LOCAL-00090" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675649871021</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1675649871022</updated>
+    </task>
+    <task id="LOCAL-00091" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675652098067</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1675652098067</updated>
+    </task>
+    <task id="LOCAL-00092" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675727737284</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1675727737284</updated>
+    </task>
+    <task id="LOCAL-00093" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675908433283</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1675908433283</updated>
+    </task>
+    <task id="LOCAL-00094" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1675993848699</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1675993848699</updated>
+    </task>
+    <task id="LOCAL-00095" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676019853988</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1676019853988</updated>
+    </task>
+    <task id="LOCAL-00096" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676254134865</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1676254134865</updated>
+    </task>
+    <task id="LOCAL-00097" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676341385517</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1676341385517</updated>
+    </task>
+    <task id="LOCAL-00098" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676341452671</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1676341452671</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

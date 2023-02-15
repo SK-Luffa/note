@@ -1,9 +1,12 @@
 {
-  "compilerOptions": {//编译选项
+  "script":{
+    "dev":" nodemon --watch src -e ts --exec ts-node src/index.ts "
+  }
+,  "compilerOptions": {//编译选项
     "target": "es2016",//配置编译目标代码的版本标准
     "module": "CommonJS",//配置编译目标使用的模块化标准
     "lib": ["es2016"],//运行的环境
-    "outDir": "./dist"
+    "outDir": "./dist"//编译结果的目录
   },
   // "include": [//编译后的文件存放的文件夹，起始位置为当前文件
   //   "./src"
