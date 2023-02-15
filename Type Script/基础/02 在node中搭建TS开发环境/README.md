@@ -4,7 +4,7 @@
 
 默认情况下，TS会做出下面几种假设：
 
-1. 假设当前的执行环境时DOM
+1. 假设当前的执行环境是浏览器环境
 2. 如果代码中没有使用模块化语句（import，export），便认为该代码是全局执行
 3. 编译的目标是ES3
    
@@ -20,7 +20,7 @@
 
 
  * 由于我们在配置文件规定了lib（环境），去掉了浏览器环境，但是没有办法直接配置node环境 所以需要安装一个第三方库：
-    
+     
      **@types/node**
 
  * @types是一个ts官方的类型库，其中包含了很多对js代码的类型描述。 
@@ -30,5 +30,7 @@
 
 # 使用第三方库简化流程 
 
-* ts-node:将TS代码在内存中完成编译，同时完成运行
-* nodemon:用于监测文件的变化  cnpm i -g nodemon       运行命令： nodemon --exec ts-node src/index.ts
+* ts-node:将TS代码在内存中完成编译，同时完成运行   
+    1.  npm i -g ts-node    
+    2.   ts-node src/index.ts  运行index.ts 并且不会忽略 tsconfig.json文件
+* nodemon:用于监测文件的变化  cnpm i -g nodemon       运行命令： nodemon --exec ts-node src/index.ts 
