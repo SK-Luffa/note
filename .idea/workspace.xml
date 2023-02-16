@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7162e9a-be6e-4433-b321-4ca5eb1fddf9" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Type Script/基础/03 基本类型检查/01 类型约束和变异结果对比/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Type Script/基础/03 基本类型检查/01 类型约束和变异结果对比/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,21 +114,7 @@
       <workItem from="1675124718218" duration="984000" />
       <workItem from="1675218788866" duration="807000" />
       <workItem from="1675649812392" duration="12010000" />
-      <workItem from="1676455984585" duration="670000" />
-    </task>
-    <task id="LOCAL-00051" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1671179658025</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1671179658025</updated>
-    </task>
-    <task id="LOCAL-00052" summary="2022.8.02/15.46-luffa_dzx">
-      <created>1671305875075</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1671305875075</updated>
+      <workItem from="1676455984585" duration="1659000" />
     </task>
     <task id="LOCAL-00053" summary="2022.8.02/15.46-luffa_dzx">
       <created>1671385761674</created>
@@ -458,7 +445,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676456042627</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676457869492</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1676457869492</updated>
+    </task>
+    <task id="LOCAL-00101" summary="2022.8.02/15.46-luffa_dzx">
+      <created>1676457933091</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1676457933092</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
