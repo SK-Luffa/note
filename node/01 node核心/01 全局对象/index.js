@@ -7,4 +7,5 @@
 
 // const buffer = Buffer.from("udiajsjkdjlakjsdlk", "utf-8")
 // console.log(buffer)
-console.log(process.cwd());
+// console.log(process.cwd()); 
+console.log(global);
