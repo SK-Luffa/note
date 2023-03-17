@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function createDeck() {
     const deck = [];
-    for (let index = 0; index < 3; index++) {
+    for (let index = 1; index < 14; index++) {
         deck.push({
             mark: index,
             color: "♠️"
@@ -27,4 +27,6 @@ function printDeck(deck) {
         console.log(card.color + card.mark);
     });
 }
+const deck = createDeck();
+printDeck(deck);
 // function findCards(color:Color){}
