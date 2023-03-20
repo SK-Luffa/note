@@ -21,6 +21,10 @@ function createDeck() {
         });
     }
     return deck;
+
+
+
+    
 }
 function printDeck(deck) {
     deck.forEach(card => {
