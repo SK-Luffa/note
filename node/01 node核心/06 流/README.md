@@ -73,6 +73,7 @@ options:
    1. open   
    2. error
    3. close  
+   4. drain 
 2. ws.write(data) 写入一组数据
    1. data:可以是字符串或Buffer
    2. 返回一个Boolean值  true: 写入通道没有被填满，接下来的数据可以直接写入无需排队，false：写入通道目前已被填满，接下来的数据将进入写入队列
