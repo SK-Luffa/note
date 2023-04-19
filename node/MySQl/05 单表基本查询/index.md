@@ -6,6 +6,10 @@
 
    select 条件1,case sex  when 0 then   "男" else "女 "  end  '性别' ,条件3   from   表名
 
+   distinct (去重)
+
+   select destinct 属性名   from  表名 
+
 
    # 可以添加where  
 
@@ -21,5 +25,6 @@
    7. like   where name like '%张% '
    8. and
    9. or 
+
 
 order by  条件  desc(降序) asc(升序)  limit 10，10       --limit 10，10 去掉十条数据找十条数据   limit (page-1)*pagesize,pagesize
