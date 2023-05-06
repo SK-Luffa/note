@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "version": "demo",
+  "description": "demo",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mockjs": "^1.1.0",
+    "mysql2": "^3.2.3",
+    "sequelize": "^6.31.0"
+  }
+}
