@@ -1,0 +1,7 @@
+{
+    "ENV":{
+        "NODE_ENV":"development"
+    },
+    "watch":["*.js","*.json"],
+    "ignore":["package*.json","yarn.lock","nodemon.json ","node_modules","public"]
+}
