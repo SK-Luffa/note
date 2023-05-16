@@ -6,12 +6,16 @@
 </template>
 
 <script>
+import { computed } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  computed(){
+
   }
 }
 </script>
