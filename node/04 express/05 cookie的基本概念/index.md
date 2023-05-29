@@ -39,4 +39,40 @@
 
 
 # Cookie的组成
- cookie是浏览器中一个特有的概念，他就像浏览器的专属卡包
+ cookie是浏览器中一个特有的概念，他就像浏览器的专属卡包，管理着各个网站的信息
+
+ 每个cookie其实就相当于是属于某个网站的卡片，它记录了一下这些信息：
+
+ * key：键，比如 「身份编号」
+ * value：值，比如大专哥的身份账号是「213131231231231231212312」，这有点像卡片的条形码，当然，它可以是任何信息
+ * domain：域，表示这个cookie是属于那个网站的，比如 luffa.tech,表示这个cookie属于luffa.tech这个网站
+ * path：路径，表示这个cookie是属于该网站的哪个基路径，就好比是同一家公司不同部门会颁发不同的出入证。比如 /news，表示这个cooki是属于/news这个路径的
+ * secure：是否使用安全传输
+ * expire：过期时间，表示该cookie在什么时间过期
+  
+  当浏览器发送一个请求时，它会瞄一眼自己的卡包，看看那些卡片适合附带捎给服务器，如果一个cookie**同时满足**以下条件，则这个cookie会被附带到请求中：
+
+  * cookie没有过期
+  * cookie中的域和这次请求的域是匹配的
+    * 比如cookie中的域是 luffa.com 则可以匹配的请求域有：luffa.com、 www.luffa.com、blogs.luffa.com 等
+    * 比如cookie中的域是 www.luffa.com 则只能匹配www.luffa.com这样的请求域
+    * cookie是不在乎端口的，只要域匹配即可
+  * cookie中请求的path和这次请求的path是匹配的
+    *  比如cookie中的path是 /news  则可以匹配的请求路径是 /news、/news/details、/news/a/b/c 等 ，但不能匹配 /blogs
+    *  如果path是/ 可以想象 匹配的就是所有路径
+  * 验证cookie的安全传输
+    * 如果cookie的secure的属性是 true，则请求协议必须是https，否则不会发送该cookie
+    * 如果cookir的secure的属性是 false ，则请求可以是http，也可以是https
+  
+  如果一个cookie满足了上述的所有条件，那么浏览器就会自动的把cookie加入到这次请求中  
+
+  具体方式是：**浏览器会将符合条件的cookie，自动放置到请求头当中**  ；例如，当我在浏览器中访问百度的时候，他在请求头中附带了下面的cookie：
+
+  
+
+
+  
+
+
+
+
