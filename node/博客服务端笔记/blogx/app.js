@@ -1,3 +1,5 @@
+// 程序主入口文件
+
 // 引入第三方包
 var createError = require('http-errors');
 var express = require('express');
@@ -8,6 +10,17 @@ var logger = require('morgan');
 // 路由引入 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+
+
+
+// 数据库连接引入
+require('./dao/dbConnect')
+
+
+
+
+
 
 // 创建服务器实例
 var app = express();
