@@ -7,6 +7,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+// 数据库连接引入
+require('./dao/db')
+
+// 创建服务器实例
+var app = express();
+
 // 路由引入 
 var adminRouter = require('./routes/admin');
 // var usersRouter = require('./routes/users');
@@ -14,11 +21,7 @@ var adminRouter = require('./routes/admin');
 
 
 
-// 数据库连接引入
-require('./dao/db')
 
-// 创建服务器实例
-var app = express();
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
