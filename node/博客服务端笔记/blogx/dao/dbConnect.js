@@ -2,7 +2,7 @@
 
 
 // 引入seqelize 模型
-const { Sequelize } = require('sequelize')
+const { Sequelize, Model } = require('sequelize')
 
 const env=require('./env')
 
@@ -16,14 +16,18 @@ const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PWD, {
     logging: false,//控制sql语句是否在控制台显示
 })
 
+//这里是测试是否连接成功， 
 const x = (async ()=>{
     try {
         await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
+        console.log('Connection has been established successfully,数据库连接成功');
     } catch (error) {
-        console.error('Unable to connect to the database:', error);
+        console.error('数据库连接失败,Unable to connect to the database:', error);
     }
 })()
+
+// 向外部暴露连接实例
+module.exports=sequelize
 
 
 
