@@ -6,14 +6,14 @@
 const adminModule = require('./model/adminModel')
 
 
-module.exports.loginDao=async (loginInfo)=>{
+module.exports.loginDao = async (loginInfo) => {
 
-    // 接下来需要连接数据库进行查询操作
- return await adminModule.findAll({
-        where:{
-            loginId:loginInfo.loginId,
-          loginPwd:loginInfo.loginPwd
-        }
-    })
-    
+  // 接下来需要连接数据库进行查询操作
+  return await adminModule.findAll({
+    where: {
+      loginId: loginInfo.loginId,
+      loginPwd: loginInfo.loginPwd
+    }
+  })
+
 }

@@ -10,8 +10,10 @@
     "debug": "~2.6.9",
     "dotenv": "^16.1.4",
     "express": "~4.16.1",
+    "express-jwt": "^8.4.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.0",
     "md5": "^2.3.0",
     "morgan": "~1.9.1",
     "mysql2": "^3.3.3",
@@ -19,6 +21,6 @@
     "sequelize": "^6.32.0"
   },
   "devDependencies": {
-    "@types/node": "^20.2.5"
+    "@types/node": "^20.3.1"
   }
 }

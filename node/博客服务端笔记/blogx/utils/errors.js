@@ -1,5 +1,5 @@
 //自定义错误
-
+const tool =require('./tool')
 // 当错误发生时，这里捕获到错误，然后抛出我们自定义的错误信息
 
 
@@ -11,8 +11,10 @@ class ServiceError extends Error{
         super(message)
         this.code=code 
     }
-    //方法
-    toResponseJSON(){}
+    //方法   格式化的返回错误信息
+    toResponseJSON(){
+        return tool.formatResponse(this.code,this.message, null)
+    }
 
 }
 
