@@ -9,9 +9,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+
 var { expressjwt: expressJWT } = require('express-jwt')//引入express-jwt 这个包的作用是对传过来的token进行一个处理 
 const md5 = require('md5');//这里引入md5 作用是 expre ssJWT secret对象 用来比对本地密钥名称是否和用户token传递过来的密钥名称一致（因为我们在sevice层在向客户端传递token的时候里面就包含了密钥名称）
 const env = require('./dao/env')//这里是作为md5的参数，与用户端传递过来的token进行比对
+
+const session=require('express-session')
 
 require('express-async-errors')
 
@@ -23,9 +27,17 @@ require('./dao/db')
 
 // 创建服务器实例
 var app = express();
+app.use(session({
+  secret:env.SESSION_SECRET,
+  resave:true,
+  saveUninitialized:true,
+  cookie:false
+}))
 
 // 路由引入 
-var adminRouter = require('./routes/admin');
+const adminRouter = require('./routes/admin');
+const qrCodeRouter=require('./routes/QRcode')
+const bannerRouter=require('./routes/banner')
 
 // var usersRouter = require('./routes/users');
 
@@ -56,6 +68,14 @@ const jwt = expressJWT({
     {
       "url": '/api/admin/login',
       methods: ['POST']
+    },
+    {
+      "url": '/api/qrcode',
+      methods: ['POST']
+    },
+    {
+      "url": '/api/banner',
+      methods: ['GET']
     }
   ]
 })
@@ -65,6 +85,8 @@ app.use(jwt)
 
 // 使用路由中间件
 app.use('/api/admin', adminRouter);
+app.use('/api/qrcode', qrCodeRouter)
+app.use('/api/banner', bannerRouter)
 
 
 

@@ -12,6 +12,7 @@
     "express": "~4.16.1",
     "express-async-errors": "^3.1.1",
     "express-jwt": "^8.4.1",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^9.0.0",
@@ -19,7 +20,8 @@
     "morgan": "~1.9.1",
     "mysql2": "^3.3.3",
     "nodemon": "^2.0.22",
-    "sequelize": "^6.32.0"
+    "sequelize": "^6.32.0",
+    "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1"

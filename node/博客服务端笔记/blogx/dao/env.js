@@ -5,5 +5,6 @@ module.exports={
     DB_PWD: 'SK8dazhaxie',//密码
     DB_HOST: 'localhost',//地址
     DB_DIALECT: 'mysql',//数据库类型 
-    JWT_SCRET:'luffa'
+    JWT_SCRET:'luffa',
+    SESSION_SECRET:'luffa'
 }
