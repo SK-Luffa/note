@@ -10,8 +10,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var { expressjwt: expressJWT } = require('express-jwt')//引入express-jwt 这个包的作用是对传过来的token进行一个处理 
-const md5 = require('md5');//这里引入md5 作用是 expressJWT secret对象 用来比对本地密钥名称是否和用户token传递过来的密钥名称一致（因为我们在sevice层在向客户端传递token的时候里面就包含了密钥名称）
+const md5 = require('md5');//这里引入md5 作用是 expre ssJWT secret对象 用来比对本地密钥名称是否和用户token传递过来的密钥名称一致（因为我们在sevice层在向客户端传递token的时候里面就包含了密钥名称）
 const env = require('./dao/env')//这里是作为md5的参数，与用户端传递过来的token进行比对
+
+require('express-async-errors')
 
 
 
@@ -78,9 +80,13 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   if (err.name === "UnauthorizedError") {
     // token 验证错误，抛出我们验证的错误
-    console.log(12312312);
+
     res.send(new customError.ForbiddenError('用户未登录，或者登录已经失效').toResponseJSON()) 
-  }  
+  }  else if(err instanceof customError.ServiceError){
+    res.send(err.toResponseJSON())  
+  }else{
+     res.send(new customError.UnknownError('未知错误').toResponseJSON() )
+  }
 });
 
 module.exports = app;

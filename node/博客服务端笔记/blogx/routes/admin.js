@@ -1,7 +1,7 @@
 let express = require('express');//引入express
 let router = express.Router()//使用express的路由
 
-let { loginService } = require('../service/adminService')
+let { loginService, updateAdminService } = require('../service/adminService')
 
 let tool = require('../utils/tool')
 
@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
 // 恢复登陆状态
 router.get('/whoami', async (req, res) => {
 
-    console.log('whoami')
+   
     //  req.get()返回指定的 HTTP 请求头字段（不区分大小写匹配）
     // 1. 从客户端请求拿到token 在此之前需要先经历expressJWT的验证，  
     const token = await req.get('Authorization')
@@ -48,6 +48,17 @@ router.get('/whoami', async (req, res) => {
         "id":data.id
     }))
 
+
+})
+
+// 修改账号信息
+
+router.put('/',async (req,res)=>{
+    
+
+  const data=    await  updateAdminService(req.body)
+
+  res.send(data)
 
 })
 

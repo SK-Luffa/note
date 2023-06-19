@@ -3,9 +3,12 @@
 const md5 = require('md5')
 const jwt = require('jsonwebtoken')
 const env = require('../dao/env')
+const { VerificationError } = require('../utils/errors')
 
-const { loginDao } = require('../dao/adminDao')
+const { loginDao,updateDao } = require('../dao/adminDao')
+const { formatResponse } = require('../utils/tool')
 
+//登陆
 module.exports.loginService = async (loginInfo) => {
 
     loginInfo.loginPwd = md5(loginInfo.loginPwd) //密码加密
@@ -54,5 +57,43 @@ module.exports.loginService = async (loginInfo) => {
 
 
 
+
+}
+
+//更新  admin 用户信息
+module.exports.updateAdminService = async (accountInfo) => {
+
+
+
+    // 根据传入的loginID和旧密码来查询账户是否存在
+    const loginModule = await loginDao({
+        loginId: accountInfo.loginId,
+        loginPwd: md5(accountInfo.oldLoginPwd)
+    })
+
+    // 如果账户存在就进行下一步
+
+    if (loginModule.length >= 1 ) {
+
+        // 密码修改
+
+        // 组装新的对象，然后进行更新
+     
+      const newAdmin= {
+            name: accountInfo.name,
+            loginId: accountInfo.loginId,
+          loginPwd: md5(accountInfo.loginPwd)
+        }
+
+        await updateDao(newAdmin)
+
+        return formatResponse(200, '密码修改成功', newAdmin)
+
+    } else {
+
+        console.log("旧密码不正确");
+        // 如果账户不存在就直接返回null
+        throw new VerificationError("旧密码不正确")
+    }
 
 }
