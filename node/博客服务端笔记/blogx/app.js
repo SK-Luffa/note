@@ -38,6 +38,7 @@ app.use(session({
 const adminRouter = require('./routes/admin');
 const qrCodeRouter=require('./routes/QRcode')
 const bannerRouter=require('./routes/banner')
+const upLoadRouter=require('./routes/upload')
 
 // var usersRouter = require('./routes/users');
 
@@ -76,6 +77,10 @@ const jwt = expressJWT({
     {
       "url": '/api/banner',
       methods: ['GET']
+    },
+    {
+      "url": '/api/upload',
+      methods: ['POST']
     }
   ]
 })
@@ -87,6 +92,7 @@ app.use(jwt)
 app.use('/api/admin', adminRouter);
 app.use('/api/qrcode', qrCodeRouter)
 app.use('/api/banner', bannerRouter)
+app.use('/api/upload', upLoadRouter)
 
 
 
